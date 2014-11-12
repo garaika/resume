@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Гараев Д</title>
+  <meta charset="utf-8">
+  <script> 
+   window.onload = function() {
+    var drawingCanvas = document.getElementById('smile');
+    if(drawingCanvas && drawingCanvas.getContext) {
+     var context = drawingCanvas.getContext('2d');
+     // Рисуем окружность 
+     context.strokeStyle = "#000";
+     context.fillStyle = "#fc0";
+     context.beginPath();
+     context.arc(500,100,50,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     // Рисуем левый глаз 
+	 context.strokeStyle = "#000";
+     context.fillStyle = "#8B4513";
+     context.beginPath();
+     context.arc(484,90,8,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     // Рисуем правый глаз
+	 context.strokeStyle = "#000";
+	 context.fillStyle = "#8B4513";	 
+     context.beginPath();
+     context.arc(516,90,8,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     // Рисуем рот
+     context.beginPath();
+     context.moveTo(470,115);
+     context.quadraticCurveTo(500,130,530,115);
+     context.quadraticCurveTo(500,150,470,115); 
+     context.closePath();
+     context.stroke();
+     context.fill();
+	 //Рога
+	 context.beginPath();
+     context.moveTo(480,53);
+	 context.lineTo(460, 20);
+	 context.moveTo(520,53);
+	 context.lineTo(540, 20);
+	 context.moveTo(453, 120);
+	 context.lineTo(300, 300);
+	 context.moveTo(300, 300);
+	 context.lineTo(10, 300);
+	 context.moveTo(463, 137);
+	 context.lineTo(305, 320);
+	 context.moveTo(305, 320);
+	 context.lineTo(10, 320);
+	 context.closePath();
+     context.stroke();
+     context.fill();
+	 
+	 //Панцирь
+	 context.strokeStyle = "#000";
+     context.fillStyle = "#FFDAB9";
+     context.beginPath();
+	 context.scale(100 / 25, 3);
+     context.arc(43, 58, 40, 0, Math.PI * 2, true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+	 
+	 	 //Панцирь2
+	 context.strokeStyle = "#000";
+     context.fillStyle = "#ADFF2F";
+     context.beginPath();
+	 context.scale(100 / 20, 3);
+     context.arc(8, 25, 5, 0, Math.PI * 2, true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <canvas id="smile" width="2000" height="2000">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+ </body>
+</html>
